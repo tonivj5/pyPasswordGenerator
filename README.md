@@ -7,22 +7,22 @@ It's a simple program that it's able of generate randoms, variables and with cus
 Parameters
 ===
 
-Order|Parameter|What doing?
---|--
-0 | *[size](#size)* | You can choose how long you want to generate your password
-1 | *[mixVocabulary](#mixVocabulary)* | You choose your game of characters
-2 | *[repeatCharacters](#repeatCharacters)* | It lets or doesn't let to use characters that it already has used
+Order | Parameter | What doing?
+--- | --- | ---
+0 | *size* | You can choose how long you want to generate your password
+1 | *mixVocabulary* | You choose your game of characters
+2 | *repeatCharacters* | It lets or doesn't let to use characters that it already has used
 
-<a name="size">size</a> - `int`
+size - `int`
 ---
 You can choose how long you want to generate your password.
 
-<a name="mixVocabulary">mixVocabulary</a> - `String` - Default: `a`
+mixVocabulary - `String` - Default: `a`
 ---
 You choose your game of characters.
 
-Value|What doing?
---|--
+Value | What doing?
+--- | ---
 *a* | All (lower/upper-case vocals, lower/upper-case consonants, numbers and specials)
 *v* | Only lower-case vocals
 *V* | Only upper-case vocals
@@ -51,12 +51,12 @@ If you want to use your own game of characters, you will type '@' at start of pa
       return 'X3c33'
   ```
 
-<a name="repeatCharacters">repeatCharacters</a> - `Boolean` - Default: `True`
+repeatCharacters - `Boolean` - Default: `True`
 ---
 It lets or doesn't let to use characters that it already has used.
 
 Value|What doing?
---|--
+---|---
 *True* | This lets to repeat characters that it's already in passphrase.
 *False* | This doesn't let to repeat characters that it's already in passphrase.
 This parameter is used for generate password with characters that it isn't possible to repeat (`True`) or it's possible to repeat (`False`).
