@@ -10,7 +10,7 @@ def makeVocabulary(mixVocabulary):
         vocals = "aeiou"
         consonants = "bcdfghjklmnpqrstvwxyz"
         numbers = "0123456789"
-        specials = "#./^+-_@"
+        specials = "#.,*/^+-_@[]()?'"
 
         vocabulary = ""
         mixVocabulary = str(mixVocabulary)
@@ -28,7 +28,7 @@ def makeVocabulary(mixVocabulary):
 
         return vocabulary
 
-def generate(size, repeatCharacters=True, mixVocabulary="a"):
+def generate(size,  mixVocabulary="a", repeatCharacters=True):
     """
         a -> All (lower/upper-case vocals, lower/upper-case consonants, numbers and specials)
         v -> Only lower-case vocals
@@ -49,7 +49,7 @@ def generate(size, repeatCharacters=True, mixVocabulary="a"):
     i = 0
     while i < size:
         if len(passphrase) == len(vocabulary) and not repeatCharacters:
-            print("Alcanzado el límite", len(vocabulary))
+            print("You have reached the limit of characters without repeat", len(vocabulary))
             return passphrase
 
         letter = vocabulary[randrange(len(vocabulary))]
