@@ -48,8 +48,8 @@ def generate(size, repeatCharacters=True, mixVocabulary="a"):
 
     i = 0
     while i < size:
-        if len(passphrase) == (len(vocabulary)-1) and not repeatCharacters:
-            print("Alcanzado el límite", len(passphrase))
+        if len(passphrase) == len(vocabulary) and not repeatCharacters:
+            print("Alcanzado el límite", len(vocabulary))
             return passphrase
 
         letter = vocabulary[randrange(len(vocabulary))]
