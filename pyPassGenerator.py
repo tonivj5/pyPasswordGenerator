@@ -35,21 +35,6 @@ def makeVocabulary(mixVocabulary):
         return vocabulary
 
 def generatePass(size,  mixVocabulary="a", repeatCharacters=True):
-    """
-        # MIX VOCABULARY
-        a -> All (lower/upper-case vocals, lower/upper-case consonants, numbers and specials)
-        v -> Only lower-case vocals
-        V -> Only upper-case vocals
-        c -> Only lower-case consonants
-        C -> Only upper-case consonants
-        n -> Only numbers
-        s -> Only specials
-
-        It's possible to use combinations, for example:
-            Cn -> Only upper-case consonants and numbers.
-        If you want to use your own vocabulary, you will type '@' at start of parameter, for example:
-                @bXcD3 -> Only will be used the characters b, X, c, D and 3.
-    """
     passphrase = ""
     vocabulary = makeVocabulary(mixVocabulary)
 
