@@ -12,6 +12,7 @@ def makeVocabulary(mixVocabulary):
         numbers = "0123456789"
         specials = "#./^+-_@"
 
+        vocabulary = ""
         mixVocabulary = str(mixVocabulary)
 
         if mixVocabulary[0] == "@": vocabulary = mixVocabulary[1:]
