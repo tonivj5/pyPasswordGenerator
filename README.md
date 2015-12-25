@@ -1,3 +1,3 @@
-# python
+# pyPassGenerator
 
-Ejercicios en Python
+It's a simple program that it's able of generate randoms, variables and with custom characters password.

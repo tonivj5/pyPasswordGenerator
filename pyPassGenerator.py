@@ -34,7 +34,7 @@ def makeVocabulary(mixVocabulary):
 
         return vocabulary
 
-def generate(size,  mixVocabulary="a", repeatCharacters=True):
+def generatePass(size,  mixVocabulary="a", repeatCharacters=True):
     """
         # MIX VOCABULARY
         a -> All (lower/upper-case vocals, lower/upper-case consonants, numbers and specials)
@@ -69,4 +69,4 @@ def generate(size,  mixVocabulary="a", repeatCharacters=True):
     return passphrase
 
 if __name__ == '__main__':
-    print(generate(100))
+    print(generatePass(25, "@123ToNiV"))
