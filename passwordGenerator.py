@@ -24,7 +24,7 @@ def generate(size, repeatCharacters=True):
         letter = vocabulary[randrange(len(vocabulary))]
         letterVerified = True if repeatCharacters else verifyLetter(letter, passphrase)
 
-        if letterVerified and repeatCharacters:
+        if letterVerified:
             passphrase += letter
             i += 1
 
