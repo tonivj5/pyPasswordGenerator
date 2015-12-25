@@ -1,4 +1,5 @@
 from random import randrange
+from re import compile
 
 def verifyLetter(letter, passphrase):
     for i in range(len(passphrase)):
@@ -10,10 +11,15 @@ def makeVocabulary(mixVocabulary):
         vocals = "aeiou"
         consonants = "bcdfghjklmnpqrstvwxyz"
         numbers = "0123456789"
-        specials = "#.,*/^+-_@[]()?'"
+        specials = "#.,*/^+-_@[]()?' "
 
         vocabulary = ""
         mixVocabulary = str(mixVocabulary)
+        pattern = compile("(@.+|[avVcCns]+)")
+
+        if not pattern.match(mixVocabulary):
+            print("You have passed mixVocabulary parameter like a empty parameter. This's understanded how 'a'")
+            return (vocals + consonants + numbers + vocals.upper() + specials + consonants.upper())
 
         if mixVocabulary[0] == "@": vocabulary = mixVocabulary[1:]
 
@@ -30,6 +36,7 @@ def makeVocabulary(mixVocabulary):
 
 def generate(size,  mixVocabulary="a", repeatCharacters=True):
     """
+        # MIX VOCABULARY
         a -> All (lower/upper-case vocals, lower/upper-case consonants, numbers and specials)
         v -> Only lower-case vocals
         V -> Only upper-case vocals
