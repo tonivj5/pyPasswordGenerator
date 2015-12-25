@@ -6,14 +6,44 @@ def verifyLetter(letter, passphrase):
             return False
     return True
 
-def generate(size, repeatCharacters=True):
-    passphrase = ""
-    vocals = "aeiou"
-    consonants = "bcdfghjklmnpqrstvwxyz"
-    numbers = "0123456789"
-    simbols = "#./^+-_"
+def makeVocabulary(mixVocabulary):
+        vocals = "aeiou"
+        consonants = "bcdfghjklmnpqrstvwxyz"
+        numbers = "0123456789"
+        specials = "#./^+-_@"
 
-    vocabulary = vocals + consonants + numbers + vocals.upper() + simbols + consonants.upper()
+        mixVocabulary = str(mixVocabulary)
+
+        if mixVocabulary[0] == "@": vocabulary = mixVocabulary[1:]
+
+        if len(vocabulary) == 0:
+            vocabulary += vocals if mixVocabulary.count("a") || mixVocabulary.count("v") else ""
+            vocabulary += vocals.upper() if mixVocabulary.count("a") || mixVocabulary.count("V") else ""
+            vocabulary += consonants if mixVocabulary.count("a") || mixVocabulary.count("c") else ""
+            vocabulary += consonants.upper() if mixVocabulary.count("a") || mixVocabulary.count("C") else ""
+            vocabulary += numbers if mixVocabulary.count("a") || mixVocabulary.count("n") else ""
+            vocabulary += specials if mixVocabulary.count("a") || mixVocabulary.count("s") else ""
+            # vocabulary += vocals + consonants + numbers + vocals.upper() + specials + consonants.upper()
+
+        return vocabulary
+
+def generate(size, repeatCharacters=True, mixVocabulary="a"):
+    """
+        a -> All (lower/upper-case vocals, lower/upper-case consonants, numbers and specials)
+        v -> Only lower-case vocals
+        V -> Only upper-case vocals
+        c -> Only lower-case consonants
+        C -> Only upper-case consonants
+        n -> Only numbers
+        s -> Only specials
+
+        It's possible to use combinations, for example:
+            Cn -> Only upper-case consonants and numbers.
+        If you want to use your own vocabulary, you will type '@' at start of parameter, for example:
+                @bXcD3 -> Only will be used the characters b, X, c, D and 3.
+    """
+    passphrase = ""
+    vocabulary = makeVocabulary(mixVocabulary)
 
     i = 0
     while i < size:
