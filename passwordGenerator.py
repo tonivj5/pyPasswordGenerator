@@ -17,12 +17,12 @@ def makeVocabulary(mixVocabulary):
         if mixVocabulary[0] == "@": vocabulary = mixVocabulary[1:]
 
         if len(vocabulary) == 0:
-            vocabulary += vocals if mixVocabulary.count("a") || mixVocabulary.count("v") else ""
-            vocabulary += vocals.upper() if mixVocabulary.count("a") || mixVocabulary.count("V") else ""
-            vocabulary += consonants if mixVocabulary.count("a") || mixVocabulary.count("c") else ""
-            vocabulary += consonants.upper() if mixVocabulary.count("a") || mixVocabulary.count("C") else ""
-            vocabulary += numbers if mixVocabulary.count("a") || mixVocabulary.count("n") else ""
-            vocabulary += specials if mixVocabulary.count("a") || mixVocabulary.count("s") else ""
+            vocabulary += vocals if mixVocabulary.count("a") or mixVocabulary.count("v") else ""
+            vocabulary += vocals.upper() if mixVocabulary.count("a") or mixVocabulary.count("V") else ""
+            vocabulary += consonants if mixVocabulary.count("a") or mixVocabulary.count("c") else ""
+            vocabulary += consonants.upper() if mixVocabulary.count("a") or mixVocabulary.count("C") else ""
+            vocabulary += numbers if mixVocabulary.count("a") or mixVocabulary.count("n") else ""
+            vocabulary += specials if mixVocabulary.count("a") or mixVocabulary.count("s") else ""
             # vocabulary += vocals + consonants + numbers + vocals.upper() + specials + consonants.upper()
 
         return vocabulary
