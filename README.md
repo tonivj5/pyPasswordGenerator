@@ -4,16 +4,28 @@ It's a simple program that it's able of generate randoms, variables and with cus
 
 ---
 
+How can I use it?
+===
+```bash
+$ pip install pypasswordgenerator
+```
+
+```python
+from pyPassGenerator import generatePass
+myPass = generatePass(5, "a", True)
+```
+
+
 Parameters
 ===
 
 Order | Parameter | What doing?
 --- | --- | ---
-0 | *size* | You can choose how long you want to generate your password
+0 | *long* | You can choose how long you want to generate your password
 1 | *mixVocabulary* | You choose your game of characters
 2 | *repeatCharacters* | It lets or doesn't let to use characters that it already has used
 
-size - `int`
+long - `int`
 ---
 You can choose how long you want to generate your password.
 
@@ -45,11 +57,11 @@ If you want to use your own game of characters, you will type '@' at start of pa
 
     @bXcD3 -> Only will be used the characters b, X, c, D and 3.
 
-  - Example
-  ```python
-      generatePass(5, "@bXcD3")
-      return 'X3c33'
-  ```
+- Example
+```python
+    generatePass(5, "@bXcD3")
+    return 'X3c33'
+```
 
 repeatCharacters - `Boolean` - Default: `True`
 ---
