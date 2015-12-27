@@ -1,6 +1,6 @@
 # pyPassGenerator
 
-It's a simple program that it's able of generate randoms, variables and with custom characters password.
+It's a simple program that it's able of generate randoms, variables and with custom characters password and... it's written in Python!
 
 ---
 
