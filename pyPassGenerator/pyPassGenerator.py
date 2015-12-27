@@ -34,12 +34,12 @@ def makeVocabulary(mixVocabulary):
 
         return vocabulary
 
-def generatePass(size,  mixVocabulary="a", repeatCharacters=True):
+def generatePass(long,  mixVocabulary="a", repeatCharacters=True):
     passphrase = ""
     vocabulary = makeVocabulary(mixVocabulary)
 
     i = 0
-    while i < size:
+    while i < long:
         if len(passphrase) == len(vocabulary) and not repeatCharacters:
             print("You have reached the limit of characters without repeat", len(vocabulary))
             return passphrase
