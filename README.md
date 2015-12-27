@@ -7,7 +7,7 @@ It's a simple program that it's able of generate randoms, variables and with cus
 How can I use it?
 ===
 ```bash
-$ pip install pypasswordgenerator
+$ pip install pyPassGenerator
 ```
 
 ```python
