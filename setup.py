@@ -1,25 +1,20 @@
-from setuptools import setup, find_packages
-from os import path
+from distutils.core import setup
 
 version="1.0.1"
 
 setup(
-    name='pyPassGenerator',
-    version=version,
-    description='Generate your random password',
+    name = 'pyPassGenerator',
+    packages = ['pyPassGenerator'],
+    version = version,
+    description = 'Generate your random password',
     long_description="""It’s a simple program that it’s able of generate randoms, variables and with custom characters password and... it's written in Python!
 
                         Documented in https://github.com/xxxtonixxx/pyPasswordGenerator/blob/master/README.md""",
-    url='https://github.com/xxxtonixxx/pyPasswordGenerator.git',
-    download_url=(
-        'https://github.com/xxxtonixxx/pyPasswordGenerator/tarball/v' + version),
-    packages=find_packages(),
-
-    author='Toni Villena',
-    author_email='tonivj5@gmail.com',
-
-    license='GNU GPLv2',
-
+    author = 'Toni Villena',
+    author_email = 'tonivj5@gmail.com',
+    url = 'https://github.com/xxxtonixxx/pyPasswordGenerator',
+    download_url = 'https://github.com/xxxtonixxx/pyPasswordGenerator/tarball/v' + version,
+    keywords = ['password', 'random', 'variable', 'pass', 'generator'],
     classifiers=[
         "Intended Audience :: Developers",
         "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
@@ -36,6 +31,5 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Topic :: Utilities",
     ],
-
-    keywords='password random variable pass generator',
+    
 )
