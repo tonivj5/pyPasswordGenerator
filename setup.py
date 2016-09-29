@@ -1,14 +1,20 @@
 from setuptools import setup, find_packages
 from os import path
 
+version="1.0.1"
+
 setup(
     name='pyPassGenerator',
-    version='1.0',
+    version=version,
     description='Generate your random password',
     long_description="""It’s a simple program that it’s able of generate randoms, variables and with custom characters password and... it's written in Python!
 
                         Documented in https://github.com/xxxtonixxx/pyPasswordGenerator/blob/master/README.md""",
     url='https://github.com/xxxtonixxx/pyPasswordGenerator.git',
+    download_url=(
+        'https://github.com/xxxtonixxx/pyPasswordGenerator/tarball/v' + version),
+    packages=find_packages(),
+
     author='Toni Villena',
     author_email='tonivj5@gmail.com',
 
@@ -32,6 +38,4 @@ setup(
     ],
 
     keywords='password random variable pass generator',
-    packages=find_packages('pyPassGenerator'),
-    package_dir={'':'pyPassGenerator'},
 )

@@ -52,6 +52,4 @@ def generatePass(long,  mixVocabulary="a", repeatCharacters=True):
             i += 1
 
     return passphrase
-
-if __name__ == '__main__':
-    print(generatePass(25, "@123ToNiV"))
+    
