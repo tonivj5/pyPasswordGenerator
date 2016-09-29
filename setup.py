@@ -10,6 +10,7 @@ setup(
     long_description="""It’s a simple program that it’s able of generate randoms, variables and with custom characters password and... it's written in Python!
 
                         Documented in https://github.com/xxxtonixxx/pyPasswordGenerator/blob/master/README.md""",
+    license='GNU GPLv2',
     author = 'Toni Villena',
     author_email = 'tonivj5@gmail.com',
     url = 'https://github.com/xxxtonixxx/pyPasswordGenerator',
